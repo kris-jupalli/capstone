@@ -1,0 +1,33 @@
+@@ -0,0 +1,32 @@
++#Reading Files into R enviroment
++getwd()
++setwd("C:/Users/Drusta5/Desktop/important/Capstone Project CKME 136/Data Set/train.csv")
++leaf_data <- read.csv("train1.csv", header = TRUE, na.strings=c("", "NA"))
++
++#Exploring Data
++head(leaf_data)
++str(leaf_data)
++class(leaf_data)
++summary(leaf_data)
++dim(leaf_data)
++
++#reading images into r
++#install.packages("drat", repos="https://cran.rstudio.com")
++drat:::addRepo("dmlc")
++library(mxnet)
++
++#source("https://bioconductor.org/biocLite.R")
++#biocLite("EBImage")
++
++library(EBImage)
++example_leaf1 <- readImage(file.path("C:/Users/Drusta5/Desktop/important/Capstone Project CKME 136/Data Set/images/images/1.jpg"))
++display(example_leaf1)
++example_leaf2 <- readImage(file.path("C:/Users/Drusta5/Desktop/important/Capstone Project CKME 136/Data Set/images/images/2.jpg"))
++display(example_leaf2)
++
++width <- 28
++height <- 28
++## pbapply is a library to add progress bar *apply functions
++## pblapply will replace lapply
++
++
